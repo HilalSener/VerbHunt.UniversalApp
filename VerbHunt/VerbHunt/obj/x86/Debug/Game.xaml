@@ -1,0 +1,54 @@
+﻿<Page
+    x:Class="VerbHunt.Game"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:VerbHunt"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="#000232">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Image Source="/Assets/saat.png" Grid.Column="2" Grid.Row="1" Height="100" Width="100"/>
+            <TextBlock x:ConnectionId='1' x:Name="Timer" Grid.Column="2" Grid.Row="1" Style="{StaticResource BasicTxtBlock}" FontSize="40" Text=""/>
+
+            <Image Source="/Assets/carakter.png" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="3" Grid.RowSpan="2" VerticalAlignment="Bottom" Height="200"/>
+            <Canvas Background="White" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" Grid.RowSpan="4"></Canvas>
+
+            <StackPanel Grid.Column="2" Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Style="{StaticResource BasicTxtBlock}" FontSize="40" Text="V"/>
+                <TextBlock x:ConnectionId='9' x:Name="Verb" Style="{StaticResource BasicTxtBlock}" Text="" FontSize="40"/>
+            </StackPanel>
+            
+            <TextBlock x:ConnectionId='2' x:Name="Verbs" Grid.Column="2" Grid.Row="4" Style="{StaticResource BasicTxtBlock}" Text="" FontSize="30"/>
+
+            <Button x:ConnectionId='3' Name="True" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="2" Style="{StaticResource BasicBtn}" Width="100" Height="60" Content="True" Background="Green" VerticalAlignment="Bottom"                   />
+            <MediaElement x:ConnectionId='4' x:Name="TrueSound" Source="/Assets/true.mp3" AutoPlay="False" Visibility="Collapsed"></MediaElement>
+            <Button x:ConnectionId='5' Name="False" Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="2" Style="{StaticResource BasicBtn}"  Width="100" Height="60" Content="False" Background="Red" VerticalAlignment="Bottom"                    />
+            <MediaElement x:ConnectionId='6' x:Name="FalseSound" Source="/Assets/false.wav" AutoPlay="False" Visibility="Collapsed"></MediaElement>
+
+            <TextBlock x:ConnectionId='7' x:Name="_Score" Grid.Column="2" Grid.Row="6" Style="{StaticResource BasicTxtBlock}" FontSize="40" Text="0"/>
+            <TextBlock x:ConnectionId='8' x:Name="_ad" Visibility="Collapsed"></TextBlock>
+        </Grid>
+    </Grid>
+</Page>
+

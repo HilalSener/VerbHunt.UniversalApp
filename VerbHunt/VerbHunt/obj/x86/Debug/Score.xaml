@@ -1,0 +1,49 @@
+﻿<Page
+    x:Class="VerbHunt.Score"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:VerbHunt"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.BottomAppBar>
+        <CommandBar Opacity="50" Foreground="Black">
+            <CommandBar.Background>
+                <SolidColorBrush Color="White" Opacity="0.8"/>
+            </CommandBar.Background>
+            <CommandBar.BorderBrush>
+                <SolidColorBrush Color="#FFBDBCBC" Opacity="0.5"/>
+            </CommandBar.BorderBrush>
+            <AppBarButton x:ConnectionId='1' Icon="Refresh"                       Label="Play Again"/>
+            <AppBarButton x:ConnectionId='2' Icon="Favorite"                    Label="Rate me"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Grid Background="#000232">
+
+                
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Image Source="/Assets/carakter2.png" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2" Height="250"/>
+        <Image Source="/Assets/frame.jpg" Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="2" VerticalAlignment="Bottom"/>
+
+        <TextBlock x:ConnectionId='3' x:Name="_Ad" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Text="" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30"/>
+        <TextBlock Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" FontSize="30" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Bottom" Text="Puanın: "/>
+        <TextBlock x:ConnectionId='4' x:Name="Puan" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Text="" Foreground="Green" HorizontalAlignment="Center" FontWeight="Bold" FontSize="50"/>
+        </Grid>
+</Page>
+
