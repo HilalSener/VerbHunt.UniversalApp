@@ -30,8 +30,8 @@ namespace VerbHunt
         }
 
         public static MobileServiceClient MobileService = new MobileServiceClient(
-        "https://verbhunt.azure-mobile.net/",
-        "itvAkqxENhoccOaCheEfjpUPLEYhRK38"
+        "YourMobileServiceURL",
+        "YourApplicationKey"
         );
         public static IMobileServiceTable<verbhuntb> tableClient = MobileService.GetTable<verbhuntb>();
         public static ObservableCollection<string> gamers = new ObservableCollection<string>();
@@ -229,10 +229,7 @@ namespace VerbHunt
            
         }
 
-       // public static string Score = puan;
         public object _name { get; set; }
-
-
     }
 }
 
