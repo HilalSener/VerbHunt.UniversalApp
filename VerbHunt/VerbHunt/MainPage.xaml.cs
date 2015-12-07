@@ -25,13 +25,6 @@ namespace VerbHunt
             this.InitializeComponent();
         }
 
-        //public static MobileServiceClient MobileService = new MobileServiceClient(
-        //"https://verbhunt.azure-mobile.net/",
-        //"itvAkqxENhoccOaCheEfjpUPLEYhRK38"
-        //);
-        //public static IMobileServiceTable<verbhuntb> tableClient = MobileService.GetTable<verbhuntb>();
-        //public static ObservableCollection<string> gamers = new ObservableCollection<string>();
-
         private void Play_Click(object sender, RoutedEventArgs e)
         {
 
@@ -40,22 +33,7 @@ namespace VerbHunt
             if (name != String.Empty)
             {
                 this.Frame.Navigate(typeof(Game), name);
-                //AddAzure(Game._Score.Text);
             }
         }
-
-        //public async void AddAzure(String skor)
-        //{
-
-        //    var gamer = new verbhuntb()
-        //    {
-        //        name = Ad.Text,
-        //        score = _Score.Text,
-        //    };
-
-        //    await tableClient.InsertAsync(gamer); 
-        //    gamers.Add(gamer.ToString());  
-
-        //}
     }
 }
